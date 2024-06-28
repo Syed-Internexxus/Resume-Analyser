@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internexxus</title>
+    <link rel="stylesheet" href="styles-2.css">    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+              <a href="https://internexxus.com">
+              <img width="220" height="42" src="logo.jpg" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Company</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="sign-in">Sign in</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="super-container">
+            <div class="upload">
+                Your Resume Score
+            </div> 
+            <div class="progress-container">
+                <div class="circular-progress">
+                    <span class="progress-value">0%</span>
+                </div>
+            </div>
+            <!-- JavaScript -->
+            <script src="app.js"></script>               
+            </div>
+            <div class="rework-container">
+                <h2>Recommended changes</h2>
+                <div class="recommendation">
+                    <input type="checkbox" id="professional-summary">
+                    <div class="icon"></div>
+                    <label for="professional-summary">
+                        <div class="text">
+                            <h3>Professional summary</h3>
+                            <p>Add a professional summary. Your resume is missing a professional summary. This is the first section recruiters will read, and it's an opportunity to introduce yourself and highlight your most relevant qualifications.</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="recommendation">
+                    <input type="checkbox" id="education">
+                    <div class="icon"></div>
+                    <label for="education">
+                        <div class="text">
+                            <h3>Education</h3>
+                            <p>Add an education section. You're missing the education section on your resume. This is an important section for recent graduates or students seeking internships.</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="recommendation">
+                    <input type="checkbox" id="skills">
+                    <div class="icon"></div>
+                    <label for="skills">
+                        <div class="text">
+                            <h3>Skills</h3>
+                            <p>Add a skills section. You haven't listed any skills on your resume. Skills are important because they help ATS systems and recruiters quickly identify whether you're a good fit for the role.</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="buttons">
+                    <button>Preview Resume</button>
+                    <button>Download Resume</button>
+                </div>
+        </div>   
+    </main>
+    <footer>
+        <p>© Internexxus</p>
+    </footer>
+</body>
+</html>

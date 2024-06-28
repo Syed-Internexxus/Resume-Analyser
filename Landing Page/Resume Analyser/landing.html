@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internexxus</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="https://internexxus.com">
+                    <img width="220" height="42" src="logo.jpg" alt="Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Company</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="sign-in">Sign in</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-container1">
+            <div class="upload">
+                <h2>Upload Your Resume</h2>
+                <p>We'll analyze it and give you an overall score</p>
+                <div>
+                    <label for="file-upload" class="upload-image-label">
+                        <img
+                            src="https://cdn.pixabay.com/photo/2014/05/26/09/48/icon-354359_960_720.png"
+                            class="upload-image" style="cursor: pointer;"
+                        />
+                        <div class="upload-btn-wrapper">
+                        <input id="file-upload" type="file" accept=".pdf" />                            
+                        </div>    
+                    </label>
+                    <input type="file" id="file-upload" class="file-upload" style="display: none;" accept=".pdf"/>
+                    <div>
+                        <button class="button" id="scan-button">Scan my Resume</button>
+                    </div>
+                    <div>
+                        <h3 class="score">Score Breakdown</h3>
+                    </div>
+                    <div class="score-breakdown">
+                        <div class="score-container">
+                            <div class="score-item">
+                                <h4>Skills</h4>
+                                <p id="skills-score">-</p>
+                            </div>
+                            <div class="score-item">
+                                <h4>Experience</h4>
+                                <p id="experience-score">-</p>
+                            </div>
+                            <div class="score-item">
+                                <h4>Education</h4>
+                                <p id="education-score">-</p>
+                            </div>
+                            <div class="score-item">
+                                <h4>Keyword Usage</h4>
+                                <p id="keyword-usage-score">-</p>
+                            </div>
+                            <div class="score-item">
+                                <h4>Resume Structure and Readability</h4>
+                                <p id="structure-score">-</p>
+                            </div>
+                        </div>
+                        <div class="works-container">
+                            <h3>Here's How it Works!</h3>
+                            <div class="works">
+                                <div class="body-2">
+                                    <h4><img src="upload.svg" style="vertical-align: middle;">Upload Your Resume</h4>
+                                    <p>Upload your resume for a secure AI analysis. We compare it to successful applications, offering personalized feedback without compromising your privacy.</p>
+                                </div>
+                                <div class="body-2">
+                                    <h4>✨Powered by AI</h4>
+                                    <p>Supercharge your resume with AI. Get a score based on 20+ factors including grammar, relevance and more!</p>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© Internexxus</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

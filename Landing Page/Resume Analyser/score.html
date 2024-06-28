@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internexxus</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">   
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="https://internexxus.com">
+                    <img width="220" height="42" src="logo.jpg" alt="Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Company</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="sign-in">Sign in</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="super-container">
+            <div class="main-container1">
+                <div class="upload">
+                    <h2>Review Your Resume</h2>
+                    <p>We've analyzed your resume and given it an overall score.</p>
+                    <div>
+                        <div>
+                            <a href="update.html">    
+                                <button class="button">Improve My Resume</button>
+                            </a>
+                        </div>
+                        <div>
+                            <h3 class="score">Score Breakdown</h3>  
+                        </div>
+                        <div class="score-breakdown">
+                            <div class="score-container">
+                                <div class="score-item">
+                                    <h4>Skills</h4>
+                                    <p id="skills-score">-</p>
+                                </div>
+                                <div class="score-item">
+                                    <h4>Experience</h4>
+                                    <p id="experience-score">-</p>
+                                </div>
+                                <div class="score-item">
+                                    <h4>Education</h4>
+                                    <p id="education-score">-</p>
+                                </div>
+                                <div class="score-item">
+                                    <h4>Keywords</h4>
+                                    <p id="keyword-usage-score">-</p>
+                                </div>
+                                <div class="score-item">
+                                    <h4>Readability</h4>
+                                    <p id="structure-score">-</p>
+                                </div>
+                            </div>
+                            <div class="works-container">
+                                <h3>Here's How it Works!</h3>
+                                <div class="works">
+                                    <div class="body-2">
+                                        <h4><img src="upload.svg" style="vertical-align: middle;">Upload Your Resume</h4>
+                                        <p>Upload your resume for a secure AI analysis. We compare it to successful applications, offering personalized feedback without compromising your privacy.</p>
+                                    </div>
+                                    <div class="body-2">
+                                        <h4>✨Powered by AI</h4>
+                                        <p>Supercharge your resume with AI. Get a score based on 20+ factors including grammar, relevance and more!</p>
+                                    </div>
+                                </div>
+                            </div>        
+                        </div>    
+                    </div> 
+                </div>
+            </div>
+            <div class="main-container2">
+                <iframe id="resume-frame" width="600" height="800"></iframe>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© Internexxus</p>
+    </footer>
+    <script>
+        // Parse URL parameters to get the S3 URL and scores
+        const urlParams = new URLSearchParams(window.location.search);
+        const s3Url = urlParams.get('s3Url');
+        const scores = JSON.parse(decodeURIComponent(urlParams.get('scores')));
+
+        // Update the score breakdown
+        document.getElementById('skills-score').innerHTML = `${scores.Skills[0]}<br>${scores.Skills[1]}`;
+        document.getElementById('experience-score').innerHTML = `${scores.Experience[0]}<br>${scores.Experience[1]}`;
+        document.getElementById('education-score').innerHTML = `${scores.Education[0]}<br>${scores.Education[1]}`;
+        document.getElementById('keyword-usage-score').innerHTML = `${scores["Keyword Usage"][0]}<br>${scores["Keyword Usage"][1]}`;
+        document.getElementById('structure-score').innerHTML = `${scores["Resume Structure and Readability"][0]}<br>${scores["Resume Structure and Readability"][1]}`;
+
+        // Embed the resume in an iframe
+        document.getElementById('resume-frame').src = s3Url;
+    </script>
+</body>
+</html>
